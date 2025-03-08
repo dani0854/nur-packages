@@ -39,6 +39,7 @@ jobs:
       run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached ci.nix
   update-nur:
     if: github.ref == 'refs/heads/main' # only run on main branch
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Trigger NUR update
