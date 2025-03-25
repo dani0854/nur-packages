@@ -20,4 +20,3 @@ jobs:
         uses: selfuryon/nix-update-action@v1.1.0
         with:
           token: ${{ secrets.UPDATE_TOKEN }}
-          pr-reviewers: dani0854

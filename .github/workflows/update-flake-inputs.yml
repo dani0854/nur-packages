@@ -21,4 +21,9 @@ jobs:
         uses: DeterminateSystems/update-flake-lock@main
         with:
           token: ${{ secrets.UPDATE_TOKEN }}
-          pr-reviewers: dani0854
+          pr-body: |
+            Automated changes by the [update-flake-lock](https://github.com/DeterminateSystems/update-flake-lock) GitHub Action.
+
+            ```
+            {{ env.GIT_COMMIT_MESSAGE }}
+            ```
